@@ -1,7 +1,7 @@
 function jsonFlickrApi (data) {
 	// create an photo object
         var photo = new Photo({
-        	title: "'<h2>' + photo.title + '</h2>'";
+        	title: "'<h2>' + photo.title + '</h2>'"; 
         	description: "'<p>' + 
                         photo.description._content +
                     '</p>'";
@@ -11,12 +11,15 @@ function jsonFlickrApi (data) {
                         '</a>' +
                     '</div>'";
         	datetaken: "'<span>' + photo.datetaken + '</span>'";
-        	ownername: "'<span> <a href ="http://flickr.com/' + photo.pathalias + '">' + photo.ownername +'</span>'";
+        	ownername: "'<span>' + 
+                        '<a href="http://flickr.com/' + photo.pathalias + '">' +
+                            photos[i].ownername +
+                        '</span>'";
 
         });
 
+    // create a photo class
 
-        // create photo class with getHTML method. 
 
     	function Photo (photo) {
         		this.photo = photo;
