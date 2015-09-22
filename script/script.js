@@ -1,4 +1,4 @@
-function jsonFlickrApi (data) {
+/*function jsonFlickrApi (data) {
 
 	var photos = data.photos.photo;
 
@@ -40,3 +40,18 @@ function jsonFlickrApi (data) {
 //
 // a. Photo constructor will take an object of the photo
 //    remember this.student in exercise 8?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
