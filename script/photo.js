@@ -1,19 +1,29 @@
 function jsonFlickrApi (data) {
 	// create an photo object
-    function Photo (photos) {
+
+    var photos = new Photo({
+        title: "photos[i].title";
+        url: "photos[i].url_m";
+        description: "photos[i].description";
+        datetaken: "photos[i].datetaken";
+        ownername: "photos[i].ownername";
+    });
+
+// Photo class
+
+    function Photo (photo) {
         this.photo = photo;
     }
 
      Photo.prototype.getHTML() = function () {
-        return this.photos.HTML;
+        return this.photo.HTML;
      }
 
      for (var i = 0; i < photos.length; i++) {
          var photos = new Photo(photos[i]);
      }
 
-     $('.gallery').append(photo.getHTML());
-    	
+     $('.gallery').append(photo.getHTML());	
 }
 
 

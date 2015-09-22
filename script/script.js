@@ -43,10 +43,30 @@
 
 
 
+//So for the photo class when we make an instance of it we need to pass in the photo object.
 
 
+You also want to make the photo class a seperate file
 
 
+And then you want your method in the class to have the html String*
+
+//Your class will have a method that returns the html string
+
+
+You won't be passing the html string to the class
+
+
+Like you are right now
+
+
+You will pass the photo object from the photos array
+
+
+Then your class constructor will have an argument of photo
+
+
+But you will need to assign this.photo to equal the photo argument
 
 
 
