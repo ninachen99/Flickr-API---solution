@@ -16,7 +16,7 @@ function jsonFlickrApi (data) {
     }
 
      Photo.prototype.getHTML() = function () {
-        return this.photo.HTML;
+        return this.photo.getHTML();
      }
 
      for (var i = 0; i < photos.length; i++) {
