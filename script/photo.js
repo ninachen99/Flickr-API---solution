@@ -1,4 +1,3 @@
-function jsonFlickrApi (data) {
 	// create an photo object
 
     var photos = new Photo({
