@@ -1,33 +1,31 @@
 	// create an photo object
 
-
     function Photo (photo) {
-        this.photo = photo;
-    }
+         this.photo = photo;
+}
 
-     Photo.prototype.getHTML = function () {
-        return '<li class="gallery-item">' +
-                '<h2>' + photos[i].title + '</h2>' +
+Photo.prototype.getHTML= function () {
+     return '<li class="gallery-item" style="background-image: url('+  this.photo.url_l  +')">' +
+                '<h2>' + this.photo.title + '</h2>' +
+                '<div class = "wrapper clearfix">' +
                 '<div class="photo">' +
-                    '<a href="' + photos[i].url_l + '">' +
-                        '<img src="' + photos[i].url_m + '">' + 
+                    '<a href="' + this.photo.url_l + '">' +
+                        '<img src="' + this.photo.url_m + '">' + 
                     '</a>' +
                 '</div>' +
-                '<p>' + 
-                    photos[i].description._content +
+                '<div class = "description"><p>' + 
+                    this.photo.description._content; +
                 '</p>' + 
                 '<div class="meta">' +
-                    '<span>' + photos[i].datetaken + '</span>' +
+                    '<span>' + this.photo.datetaken + '</span>' +
                     '<span>' + 
-                        '<a href="http://flickr.com/' + photos[i].pathalias + '">' +
-                            photos[i].ownername +
-                        '</span>' +
-                '</div>' +
-            '</li>'
-
-        }
-
-
+                        '<a class="button" href="http://flickr.com/' + this.photo.pathalias + '">' +
+                            this.photo.ownername +
+                        '</a></span>' +
+                '</div></div></div>' +
+            '</li>';
+}
+      
 
 
 
