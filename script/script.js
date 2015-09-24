@@ -1,9 +1,16 @@
 function jsonFlickrApi (data) {
 
 	var photos = data.photos.photo;
-
+	
 	for (var i = 0; i < photos.length; i++) {
-		$('.gallery').append(
+	      var photo = new photo;
+	      $('.gallery').append(photo.getHTML();
+  }
+       
+
+
+
+		/*$('.gallery').append(
 			'<li class="gallery-item">' +
 				'<h2>' + photos[i].title + '</h2>' +
 				'<div class="photo">' +
@@ -24,7 +31,17 @@ function jsonFlickrApi (data) {
 			'</li>'
 		);
 	}
-}
+}  */   
+
+/*
+but you're referencing "photos[i]" which assumes it's coming from an array which it's not 
+(from the perspective of the class). What you need to do is reference the properties from "this.photo" which
+is what we assign in the constructor.
+
+In the for loop in script.js you need to create an instance of the photo class and pass the object (photo[i])
+ and then call "getHTML()" on the instance that you created.
+You won't need them html string in script.js at all since we moved that to the method in the photo class - 
+feels like we're duplicating code and that's not the goal
 
 // HOMEWORK
 //
