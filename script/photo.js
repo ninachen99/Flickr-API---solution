@@ -1,29 +1,32 @@
 	// create an photo object
 
-    var photos = new Photo({
-        title: "photos[i].title";
-        url: "photos[i].url_m";
-        description: "photos[i].description";
-        datetaken: "photos[i].datetaken";
-        ownername: "photos[i].ownername";
-    });
-
-// Photo class
 
     function Photo (photo) {
         this.photo = photo;
     }
 
-     Photo.prototype.getHTML() = function () {
-        return this.photo.getHTML();
-     }
+     Photo.prototype.getHTML = function () {
+        return '<li class="gallery-item">' +
+                '<h2>' + photos[i].title + '</h2>' +
+                '<div class="photo">' +
+                    '<a href="' + photos[i].url_l + '">' +
+                        '<img src="' + photos[i].url_m + '">' + 
+                    '</a>' +
+                '</div>' +
+                '<p>' + 
+                    photos[i].description._content +
+                '</p>' + 
+                '<div class="meta">' +
+                    '<span>' + photos[i].datetaken + '</span>' +
+                    '<span>' + 
+                        '<a href="http://flickr.com/' + photos[i].pathalias + '">' +
+                            photos[i].ownername +
+                        '</span>' +
+                '</div>' +
+            '</li>'
 
-     for (var i = 0; i < photos.length; i++) {
-         var photos = new Photo(photos[i]);
-     }
+        }
 
-     $('.gallery').append(photo.getHTML());	
-}
 
 
 
